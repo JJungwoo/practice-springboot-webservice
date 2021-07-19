@@ -1,4 +1,4 @@
-package com.practice.springboot.webservice.board.controller;
+package com.practice.springboot.webservice.board;
 
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
