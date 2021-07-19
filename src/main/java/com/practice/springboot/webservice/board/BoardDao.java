@@ -1,11 +1,13 @@
 package com.practice.springboot.webservice.board;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @NoArgsConstructor
 @Entity
+@Getter
 public class BoardDao {
 
     @Id
