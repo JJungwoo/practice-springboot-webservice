@@ -6,10 +6,7 @@
 <mapper namespace="com.practice.springboot.webservice.board.BoardMapper">
 
     <select id="selectBoardById" resultType="BoardDao">
-        SELECT board_id
-             ,board_title
-             ,board_author
-             ,board_contents
+        SELECT board_id, board_title, board_author, board_contents
         FROM board
         WHERE board_id = #{id}
     </select>
