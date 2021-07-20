@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.practice.springboot.webservice.board.BoardMapper">
+
+    <select id="selectBoardById" resultType="BoardDao">
+        SELECT *
+        FROM board
+        WHERE board_id = #{id}
+    </select>
+
+    <insert id="insertBoard" parameterType="BoardDao">
+        INSERT INTO board (board_title, board_author, board_contents)
+        VALUES (#{title}, #{author}, #{contents})
+    </insert>
+
+    <delete id="deleteBoardById" parameterType="long">
+        DELETE FROM board
+        where board_id = #{id}
+    </delete>
+
+    <update id="updateBoardById" parameterType="BoardDao">
+        UPDATE board
+        SET board_title = #{title}, board_author = #{author}, board_contents = #{contents}
+    </update>
+
+</mapper>
