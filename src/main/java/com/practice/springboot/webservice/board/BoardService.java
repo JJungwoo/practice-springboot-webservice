@@ -14,7 +14,7 @@ public class BoardService {
 
     @Transactional
     public BoardRes getBoard(Long id) {
-
+        System.out.println("id: "+ id);
         BoardDao boardDao = boardMapper.selectBoardById(id);
 
         if (boardDao == null) {
@@ -34,12 +34,13 @@ public class BoardService {
     }
 
     @Transactional
-    public void updateBoard() {
-
+    public void deleteBoard(Long id) {
+        boardMapper.deleteBoardById(id);
     }
 
     @Transactional
-    public void deleteBoard() {
-
+    public void updateBoard(BoardDao boardDao) {
+        boardMapper.updateBoardById(boardDao);
     }
+
 }

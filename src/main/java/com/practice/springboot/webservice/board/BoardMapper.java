@@ -7,6 +7,6 @@ public interface BoardMapper {
 
     BoardDao selectBoardById(Long id);
     void insertBoard(BoardDao boardDao);
-//    void deleteBoardById(Long id);
-//    void updateBoardById(BoardDao boardDao);
+    void deleteBoardById(Long id);
+    void updateBoardById(BoardDao boardDao);
 }
