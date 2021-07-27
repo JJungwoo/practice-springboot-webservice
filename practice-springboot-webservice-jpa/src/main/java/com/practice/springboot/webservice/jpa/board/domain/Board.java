@@ -1,5 +1,6 @@
 package com.practice.springboot.webservice.jpa.board.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 
 import javax.persistence.Entity;
@@ -18,4 +19,11 @@ public class Board {
 
     private String contents;
 
+    @Builder
+    public Board(Long id, String title, String author, String contents) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.contents = contents;
+    }
 }
