@@ -49,4 +49,21 @@ class BoardRepositoryTest {
         assertNotNull(boardList);
     }
 
+    @Transactional
+    @Test
+    void findByTitleStartingWithAndIdGreaterThanEqualOrderByIdDescQuery() {
+        Pageable paging = PageRequest.of(0, 5);
+        List<Board> boardList = boardRepository.findByTitleStartingWithAndIdGreaterThanEqualOrderByIdDescQuery("Test", 1L, paging);
+        boardList.forEach(System.out::println);
+        assertNotNull(boardList);
+    }
+
+    @Transactional
+    @Test
+    void findByTitleStartingWithAndIdGreaterThanEqualOrderByIdDescNativeQuery() {
+//        Pageable paging = PageRequest.of(0, 5);
+//        List<Board> boardList = boardRepository.findByTitleStartingWithAndIdGreaterThanEqualOrderByIdDescNativeQuery("Test", 1L, paging);
+//        boardList.forEach(System.out::println);
+//        assertNotNull(boardList);
+    }
 }
