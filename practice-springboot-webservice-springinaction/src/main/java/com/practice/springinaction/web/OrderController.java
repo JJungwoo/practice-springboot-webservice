@@ -1,6 +1,6 @@
 package com.practice.springinaction.web;
 
-import com.practice.springinaction.data.OrderRepository;
+import com.practice.springinaction.data.jpa.OrderRepository;
 import com.practice.springinaction.domain.Order;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

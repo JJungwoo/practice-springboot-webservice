@@ -1,7 +1,7 @@
 package com.practice.springinaction.web;
 
-import com.practice.springinaction.data.IngredientRepository;
-import com.practice.springinaction.data.TacoRepository;
+import com.practice.springinaction.data.jpa.IngredientRepository;
+import com.practice.springinaction.data.jpa.TacoRepository;
 import com.practice.springinaction.domain.Ingredient;
 import com.practice.springinaction.domain.Ingredient.Type;
 import com.practice.springinaction.domain.Order;

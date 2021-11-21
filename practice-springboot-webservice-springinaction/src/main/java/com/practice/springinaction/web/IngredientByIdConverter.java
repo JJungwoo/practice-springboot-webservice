@@ -1,10 +1,12 @@
 package com.practice.springinaction.web;
 
-import com.practice.springinaction.data.IngredientRepository;
+import com.practice.springinaction.data.jpa.IngredientRepository;
 import com.practice.springinaction.domain.Ingredient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
+
+import java.util.Optional;
 
 @Component
 public class IngredientByIdConverter
@@ -18,6 +20,8 @@ public class IngredientByIdConverter
 
     @Override
     public Ingredient convert(String id) {
-        return ingredientRepo.findById(id);
+        Optional<Ingredient> optionalIngredient = ingredientRepo.findById(id);
+        return optionalIngredient.isPresent() ?
+                optionalIngredient.get() : null;
     }
 }

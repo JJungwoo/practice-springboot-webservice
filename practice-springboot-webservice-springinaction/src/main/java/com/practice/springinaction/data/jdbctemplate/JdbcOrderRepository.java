@@ -1,4 +1,4 @@
-package com.practice.springinaction.data;
+package com.practice.springinaction.data.jdbctemplate;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
