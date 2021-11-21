@@ -1,8 +1,10 @@
 package com.practice.springinaction.domain;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@RequiredArgsConstructor
 public class Ingredient {
 
     private final String id;
